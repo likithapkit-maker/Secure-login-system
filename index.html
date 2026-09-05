@@ -1,0 +1,8 @@
+<!doctype html><html><head><title>Secure Login</title><style>
+body{font-family:Arial;max-width:650px;margin:60px auto;padding:20px}a,button{padding:10px 16px;margin:5px;text-decoration:none}
+.card{padding:30px;border:1px solid #ddd;border-radius:12px} </style></head><body>
+<div class="card"><h1>Secure Login System</h1>
+{% with messages=get_flashed_messages() %}{% for m in messages %}<p>{{m}}</p>{% endfor %}{% endwith %}
+{% if username %}<h3>Welcome, {{username}}!</h3><a href="/logout">Logout</a>
+{% else %}<a href="/login">Login</a><a href="/register">Register</a>{% endif %}
+</div></body></html>
